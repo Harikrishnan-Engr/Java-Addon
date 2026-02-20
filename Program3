@@ -1,0 +1,23 @@
+public class ElementOccurrence {
+    public static void main(String[] args) {
+        // Input as specified: 1223455
+        String input = "1223455";
+        System.out.println("Input: " + input);
+        
+        // Array to count digits 0-9
+        int[] count = new int[10];
+        
+        // Count each digit
+        for (char c : input.toCharArray()) {
+            int digit = Character.getNumericValue(c);
+            count[digit]++;
+        }
+        
+        // Print occurrences for digits 1-5 (others are 0)
+        System.out.println("1-" + count[1] + " time");
+        System.out.println("2-" + count[2] + " time");
+        System.out.println("3-" + count[3] + " time");
+        System.out.println("4-" + count[4] + " time");
+        System.out.println("5-" + count[5] + " time");
+    }
+}
